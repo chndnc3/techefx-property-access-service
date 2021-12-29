@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: techefx-property-file-access-service
+  config:
+    import: configserver:http://localhost:8888
+  profiles:
+    active: dev
+    
+server:
+  port: 8100
+  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
